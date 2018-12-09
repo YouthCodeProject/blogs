@@ -1,25 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#" href="https://youthcodeproject.github.io">
+    <a class="navbar-brand" href="#" href="{{ site.baseurl }}">
         <img src="{{site.baseurl}}/assets/icon/icon.png" width="32" height="32" style="margin-right: 5px;" /> YouthCode Project
     </a>
 
-    <button class="navbar-toggler" type="button">
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#nav_bar" type="button" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse show">
+    <div id="nav_bar" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="https://youthcodeproject.github.io">Home</a>
+                <a class="nav-link" href="{{ site.url }}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://youthcodeproject.github.io/repos">Projects</a>
+                <a class="nav-link" href="{{ site.url }}/repos">Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://youthcodeproject.github.io/events">Events</a>
+                <a class="nav-link" href="{{ site.url }}/events">Events</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://youthcodeproject.github.io/contact">Contact</a>
+                <a class="nav-link" href="{{ site.url }}/contact">Contact</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="{{ site.baseurl }}/">Blogs</a>
