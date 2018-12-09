@@ -1,0 +1,30 @@
+title: YouthCode Project blog
+email: youthcode.project@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  YouthCode Project's official blog site, powered by Jekyll
+baseurl: "/blogs"
+url: "https://youthcodeproject.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  YouthCodeProject
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+sass:
+  style: compressed
+
+paginate: 15
+paginate-path: "/page-:num/"
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

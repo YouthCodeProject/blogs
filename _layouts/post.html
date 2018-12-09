@@ -1,0 +1,28 @@
+{% include meta.html %}
+
+<body>
+    {% include navbar.html %}
+
+    <div style="padding-top: 60px;">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <h1 class="display-4">
+                    <b>{{ page.title }}</b>
+                </h1>
+                <p>{{ page.author }} • {{ page.date | date_to_long_string: "Ordinal" }}</p>
+            </div>
+        </div>
+
+        <div class="container">
+            {{ content }}
+
+            <hr />
+
+            {% include share_footer.html %}
+        </div>
+    </div>
+
+    {% include footer.html %}
+</body>
+
+</html>
