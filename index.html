@@ -10,7 +10,7 @@ layout: home
   <div class="card-body">
     <h4 class="card-title"><a href="{{site.url}}{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h4>
     <p class="card-text text-muted">
-      <b>{{ post.date | date_to_string: "Ordinal" }}</b> by <b>{{ post.author }}</b>
+      <b>{{ post.date | date_to_long_string }}</b> by <b>{{ post.author }}</b>
     </p>
     <p class="card-text">{{ post.excerpt }} <a href="{{site.url}}{{site.baseurl}}{{post.url}}">Read more</a></p>
 
