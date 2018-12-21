@@ -1,0 +1,47 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ site.url }}{{ site.baseurl }}</link>
+    <description>{{ site.description | xml_escape }}</description>
+    {% for post in site.posts %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+      <guid>{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+      <author>{{ post.author }}</author>
+      <description>{{ post.excerpt }}</description>
+      <content:encoded>
+        <![CDATA[
+        <!doctype html>
+        <html lang="en" prefix="op: http://media.facebook.com/op#">
+          <head>
+            <meta charset="utf-8">
+            <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+            <meta property="op:markup_version" content="v1.0">
+          </head>
+          <body>
+            <article>
+              <header>
+                {{ post.title }}
+              </header>
+
+              {{ post.content | strip | xml_escape }}
+
+              <footer>
+                <p><b>{{ post.date | date_to_long_string }}</b> by <b>{{ post.author }}</b></p>
+                <div>Copyright &copy; {{ site.time | date: "%Y" }}, YouthCode Project</div>
+              </footer>
+            </article>
+          </body>
+        </html>
+        ]]>
+      </content:encoded>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
